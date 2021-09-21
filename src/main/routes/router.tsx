@@ -7,7 +7,7 @@ import {
   makeInvest,
   makeContent,
   makeProfile,
-} from '../factories';
+} from '../factories/app';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
