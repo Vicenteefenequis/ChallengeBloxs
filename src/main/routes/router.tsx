@@ -29,6 +29,9 @@ const Router: React.FC = () => {
           height: 80,
           paddingBottom: 10,
         },
+        tabBarLabelStyle: {
+          fontSize: 14,
+        },
         tabBarInactiveTintColor: globalColors.gray,
         tabBarActiveTintColor: globalColors.white,
         headerStyle: {
@@ -108,10 +111,11 @@ const Router: React.FC = () => {
         name="Content"
         component={makeContent}
         options={{
-          tabBarLabel: 'Conteúdo',
+          tabBarLabel: 'Conteúdos',
           tabBarIcon: ({color}) => (
             <Feather name="file-text" color={color} size={26} />
           ),
+          headerTitle: 'Conteúdos',
         }}
       />
       <Tab.Screen
