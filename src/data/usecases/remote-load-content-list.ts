@@ -8,7 +8,7 @@ export class RemoteLoadContentList implements LoadContentList {
     private readonly httpClient: HttpClient<LoadContentList.Model[]>,
   ) {}
 
-  async loadContent(): Promise<LoadContentList.Model[]> {
+  async loadContent(): Promise<LoadContentList.RespondeModel[]> {
     const httpResponse = await this.httpClient.request({
       url: this.url,
       method: 'get',
@@ -16,7 +16,12 @@ export class RemoteLoadContentList implements LoadContentList {
     const remoteLoadContent = httpResponse.body || [];
     switch (httpResponse.statusCode) {
       case HttpStatusCode.ok:
-        return remoteLoadContent;
+        return remoteLoadContent.map(content => ({
+          photo_url:
+            content._embedded['wp:featuredmedia'][0].media_details.sizes.medium
+              .source_url,
+          title: content.title.rendered,
+        }));
 
       case HttpStatusCode.noContent:
         return [];
