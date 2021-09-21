@@ -11,7 +11,11 @@ import {
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 import Feather from 'react-native-vector-icons/Feather';
+import {View} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,6 +31,33 @@ const Router: React.FC = () => {
         },
         tabBarInactiveTintColor: globalColors.gray,
         tabBarActiveTintColor: globalColors.white,
+        headerStyle: {
+          backgroundColor: globalColors.primaryColor,
+          elevation: 0,
+        },
+        headerTintColor: globalColors.white,
+        headerTitleAlign: 'center',
+        headerRight: () => (
+          <View
+            style={{
+              flex: 1,
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginRight: 10,
+            }}>
+            <FontAwesome5
+              name="shopping-cart"
+              size={26}
+              color={globalColors.white}
+              style={{marginRight: 10}}
+            />
+            <MaterialIcons
+              name="notifications"
+              size={26}
+              color={globalColors.white}
+            />
+          </View>
+        ),
       }}>
       <Tab.Screen
         name="Wallet"
@@ -53,7 +84,7 @@ const Router: React.FC = () => {
         component={makeInvest}
         options={{
           tabBarLabel: 'Investir',
-          tabBarIcon: ({color}) => (
+          tabBarIcon: () => (
             <FontAwesome
               name="dollar"
               color={globalColors.primaryColor}
@@ -64,7 +95,7 @@ const Router: React.FC = () => {
             position: 'absolute',
             bottom: 35,
             borderRadius: 50,
-            backgroundColor: globalColors.yellow100,
+            backgroundColor: globalColors.yellow,
             width: 70,
             height: 70,
           },
