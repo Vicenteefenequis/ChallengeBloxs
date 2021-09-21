@@ -3,5 +3,8 @@ import {LoadContentList} from '../../../../domain/usecases';
 import {makeApiUrl} from '../../http/api-url-factory';
 import {makeAxiosHttpClient} from '../../http/axios-http-client-factory';
 
-export const makeRemoteLoadContentList = (): LoadContentList =>
-  new RemoteLoadContentList(makeApiUrl(), makeAxiosHttpClient());
+export const makeRemoteLoadContentList = (
+  path?: string,
+  page?: string,
+): LoadContentList =>
+  new RemoteLoadContentList(makeApiUrl(path, page), makeAxiosHttpClient());
