@@ -5,7 +5,7 @@ import {makeRemoteLoadContentList} from '../usecases/load-content-list/remote-lo
 
 export const makeContent: React.FC = () => {
   return (
-    <ContentContext content={makeRemoteLoadContentList()}>
+    <ContentContext content={makeRemoteLoadContentList}>
       <Content />
     </ContentContext>
   );
