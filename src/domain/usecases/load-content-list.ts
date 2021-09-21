@@ -1,5 +1,7 @@
+import {ContentModel} from '../models';
+
 export interface LoadContentList {
-  loadContent: () => Promise<LoadContentList.Model[]>;
+  loadContent: () => Promise<LoadContentList.RespondeModel[]>;
 }
 
 export namespace LoadContentList {
@@ -22,4 +24,5 @@ export namespace LoadContentList {
       ];
     };
   };
+  export type RespondeModel = ContentModel;
 }
