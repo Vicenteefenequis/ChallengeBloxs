@@ -5,8 +5,8 @@ import {styles} from './styles';
 const Skelleton: React.FC = () => {
   return (
     <View style={styles.containerSkelleton}>
-      {[1, 2].map(post => (
-        <View style={styles.containerPostSkelleton}>
+      {[1, 2].map((_, index) => (
+        <View key={index} style={styles.containerPostSkelleton}>
           <View style={styles.imagePostSkelleton} />
           <View style={styles.contentPostSkelleton}>
             <View
