@@ -4,4 +4,5 @@ export default {
   yellow: '#FEC70A',
   white: '#F2F2F2',
   gray: '#8E8E8E',
+  grayShimmer: '#323232',
 };
