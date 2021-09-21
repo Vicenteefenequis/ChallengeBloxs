@@ -1,12 +1,5 @@
-export function FilterTypeParameter(filter: string) {
-  switch (filter) {
-    case 'energia':
-      return '74';
-    case 'agronegócio':
-      return '76';
-    case 'real State':
-      return '453';
-    default:
-      return '';
-  }
-}
+export const FilterType = new Map([
+  ['energia', '74'],
+  ['agronegócio', '76'],
+  ['real State', '453'],
+]);
