@@ -6,13 +6,16 @@
 </div>
 
 ### Como Rodar o  Aplicativo
+- [node](https://nodejs.org/en/)
 
-- yarn
+### Na Pasta do Projete Rode
+- [yarn](https://yarnpkg.com/) ou [npm](https://www.npmjs.com/) install (para instalar as dependecias) 
+  
 - [***IOS***]
-  - cd ios && pod install
-  - yarn ios
+  - cd ios && pod install && cd ..
+  - yarn ios ou npm ios
 - [***ANDROID***]
-  - yarn android
+  - yarn android ou npm android
 
 
 ### Sobre a arquitetura do Aplicativo
