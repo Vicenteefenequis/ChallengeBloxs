@@ -1,6 +1,9 @@
 ### Sobre o Aplicativo
 > **_Construido para um Challenge da Empresa [Bloxs](https://www.bing.com/search?q=bloxs+investimentos&cvid=bd608123123d47b0b9b4dc093c006bb6&aqs=edge.1.69i57j0l2.3575j0j1&pglt=299&FORM=ANNTA1&PC=U531)_**
-<img  src="./docs/ContentBloxs.png"></img>
+<div style="display: flex;">
+<img style="margin-right: 30px;" src="./docs/ContentBloxs.png"></img>
+<img src="./docs/EmulatorAndroid.gif"/>
+</div>
 
 ### Como Rodar o  Aplicativo
 
