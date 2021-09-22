@@ -75,17 +75,17 @@ const Content: React.FC = () => {
         ListEmptyComponent={<Skelleton />}
         ListFooterComponent={<ListFooterComponent {...{loadingMoreContent}} />}
         renderItem={({item}) => (
-          <TouchableOpacity onPress={() => Linking.openURL(item.link)}>
-            <View style={styles.containerPost}>
-              <Image
-                style={styles.imagePost}
-                source={{
-                  uri: item.photo_url,
-                }}
-              />
+          <View style={styles.containerPost}>
+            <Image
+              style={styles.imagePost}
+              source={{
+                uri: item.photo_url,
+              }}
+            />
+            <TouchableOpacity onPress={() => Linking.openURL(item.link)}>
               <Text style={styles.textPost}>{item.title}</Text>
-            </View>
-          </TouchableOpacity>
+            </TouchableOpacity>
+          </View>
         )}
       />
     </View>
