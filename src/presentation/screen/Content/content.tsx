@@ -22,6 +22,7 @@ const Content: React.FC = () => {
     setPage,
     loadingMoreContent,
     setContentList,
+    categoryList,
   } = useContent();
 
   const handleChangeFilter = useCallback(
@@ -46,25 +47,22 @@ const Content: React.FC = () => {
           horizontal
           showsHorizontalScrollIndicator={false}
           style={styles.scrollViewContainerFilter}>
-          {['todos', 'agronegócio', 'energia', 'real State'].map(
-            (filter, key) => {
-              const [selectedBoxStyle, selectedTextStyle] = selectedStyles(
-                filter,
-                filterSelected,
-              );
-
-              return (
-                <TouchableOpacity
-                  key={key}
-                  onPress={handleChangeFilter(filter)}
-                  style={[styles.containerFilter, selectedBoxStyle]}>
-                  <Text style={[styles.textFilter, selectedTextStyle]}>
-                    {filter}
-                  </Text>
-                </TouchableOpacity>
-              );
-            },
-          )}
+          {categoryList.map(filter => {
+            const [selectedBoxStyle, selectedTextStyle] = selectedStyles(
+              filter.name,
+              filterSelected,
+            );
+            return (
+              <TouchableOpacity
+                key={filter.id}
+                onPress={handleChangeFilter(filter.name)}
+                style={[styles.containerFilter, selectedBoxStyle]}>
+                <Text style={[styles.textFilter, selectedTextStyle]}>
+                  {filter.name}
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
         </ScrollView>
       </View>
       <FlatList
