@@ -14,6 +14,8 @@ export class RemoteLoadContentList implements LoadContentList {
       method: 'get',
     });
     const remoteLoadContent = httpResponse.body || [];
+
+    if (!httpResponse?.body) return [];
     switch (httpResponse.statusCode) {
       case HttpStatusCode.ok:
         return remoteLoadContent.map(content => ({
