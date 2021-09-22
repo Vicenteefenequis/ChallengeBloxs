@@ -23,6 +23,7 @@ export class RemoteLoadContentList implements LoadContentList {
             content._embedded['wp:featuredmedia'][0].media_details.sizes.medium
               .source_url,
           title: content.title.rendered,
+          link: content.link,
         }));
 
       case HttpStatusCode.noContent:
