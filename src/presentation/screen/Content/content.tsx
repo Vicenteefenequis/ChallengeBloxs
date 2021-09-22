@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   FlatList,
   Image,
+  Linking,
   ScrollView,
   Text,
   TextStyle,
@@ -74,15 +75,17 @@ const Content: React.FC = () => {
         ListEmptyComponent={<Skelleton />}
         ListFooterComponent={<ListFooterComponent {...{loadingMoreContent}} />}
         renderItem={({item}) => (
-          <View style={styles.containerPost}>
-            <Image
-              style={styles.imagePost}
-              source={{
-                uri: item.photo_url,
-              }}
-            />
-            <Text style={styles.textPost}>{item.title}</Text>
-          </View>
+          <TouchableOpacity onPress={() => Linking.openURL(item.link)}>
+            <View style={styles.containerPost}>
+              <Image
+                style={styles.imagePost}
+                source={{
+                  uri: item.photo_url,
+                }}
+              />
+              <Text style={styles.textPost}>{item.title}</Text>
+            </View>
+          </TouchableOpacity>
         )}
       />
     </View>
