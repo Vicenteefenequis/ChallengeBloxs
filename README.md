@@ -5,17 +5,19 @@
 <img src="./docs/EmulatorAndroid.gif"/>
 </div>
 
-### Como Rodar o  Aplicativo
-- [node](https://nodejs.org/en/)
+### Requisitos para Rodar o  Aplicativo
+- Instalar o [Node](https://nodejs.org/en/)
+- Instalar o [AndroidStudio](https://developer.android.com/studio) para Android ou [XCode](https://developer.apple.com/xcode/resources/) para iPhone
+- Instalar o [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
-### Na Pasta do Projete Rode
+### Como Rodar o Aplicativo
 - [yarn](https://yarnpkg.com/) ou [npm](https://www.npmjs.com/) install (para instalar as dependecias) 
   
 - [***IOS***]
-  - cd ios && pod install && cd ..
-  - yarn ios ou npm ios
+  - `` cd ios && pod install && cd ..``
+  - `` yarn ios ou npm run ios``
 - [***ANDROID***]
-  - yarn android ou npm android
+  -  ``yarn android ou npm run android``
 
 
 ### Sobre a arquitetura do Aplicativo
