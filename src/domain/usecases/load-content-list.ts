@@ -7,6 +7,7 @@ export interface LoadContentList {
 export namespace LoadContentList {
   export type Model = {
     id: string;
+    link: string;
     title: {
       rendered: string;
     };
